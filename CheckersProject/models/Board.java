@@ -40,7 +40,12 @@ public class Board {
         this.grid[5][6] = new NonKing(5, 6, false);
     }
 
+    public boolean isInBounds(int row, int col) {
+        return (row < 8 && row >= 0) && (col < 8 && col >= 0);
+    }
+
     public boolean isAPieceHere(int row, int col) {
+        if (!this.isInBounds(row, col)) return false;
         if (this.grid[row][col] != null)
             return true;
         else
