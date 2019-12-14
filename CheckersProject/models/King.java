@@ -16,6 +16,7 @@ public class King extends Piece {
         return moves;
     }
 
+    @Override
     public String toString() {
         return this.isBlack ? "bK" : "rK";
     }
